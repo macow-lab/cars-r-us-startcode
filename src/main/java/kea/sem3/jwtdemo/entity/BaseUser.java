@@ -65,4 +65,28 @@ public class BaseUser implements UserWithPassword {
       roles.add(role);
    }
 
+   @Override
+   public String getUsername() {
+      // TODO Auto-generated method stub
+      return null;
+   }
+
+   @Override
+   public String getEmail() {
+      // TODO Auto-generated method stub
+      return null;
+   }
+
+   @Override
+   public String getPassword() {
+      // TODO Auto-generated method stub
+      return null;
+   }
+
+   @Override
+   public boolean isEnabled() {
+      // TODO Auto-generated method stub
+      return false;
+   }
+
 }
