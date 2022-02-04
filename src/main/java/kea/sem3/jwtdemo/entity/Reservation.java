@@ -15,22 +15,22 @@ import java.util.List;
 @Table(name = "reservation")
 public class Reservation {
     @Id
-    private String reservation_id;
+    private String reservationid;
 
-
-    @Column(nullable = false, unique = true,length = 50)
-    private String rentor_id;
 
     @Column(nullable = false, unique = true,length = 50)
     private String created;
 
+    @Column(nullable = false, unique = true,length = 50)
+    private String rentor;
+
 
     @Column(nullable = false, unique = true,length = 50)
-    private String last_edited;
+    private String lastEdited;
 
     @Column(nullable = false, unique = true,length = 50)
     private String price;
 
     @Column(nullable = false, unique = true,length = 50)
-    private String car_id;
+    private String carid;
 }

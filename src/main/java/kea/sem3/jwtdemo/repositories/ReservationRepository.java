@@ -13,12 +13,10 @@ public interface ReservationRepository extends CrudRepository<Reservation, Strin
 
     List<Reservation> findAll();
 
-    @Query("FROM Reservation SELECT * WHERE rentor_id = :rentor_id")
-    List<Reservation> findByRentor(@Param("rentor_id") String rentor_id);
+    List<Reservation> findByRentor(String rentor);
 
-    List<Reservation> findByCreated();
+    List<Reservation> findByCreated(String created);
 
-    @Query("FROM Reservation SELECT * WHERE car_id = :car_id")
-    List<Reservation> findByCarID(@Param("car_id") String car_id);
+    List<Reservation> findByCarid(String carid);
     
 }

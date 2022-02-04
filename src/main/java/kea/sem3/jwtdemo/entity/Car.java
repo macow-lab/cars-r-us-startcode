@@ -17,7 +17,7 @@ import java.util.List;
 @Table(name = "car")
 public class Car {
     @Id
-    private String car_id;
+    private String carid;
     // Stelnummer
 
     @Column(nullable = false, unique = true,length = 50)
@@ -34,8 +34,8 @@ public class Car {
 
 
 
-    public Car(String car_id, String make, String model, String rank, double price) {
-        this.car_id = car_id;
+    public Car(String car, String make, String model, String rank, double price) {
+        this.carid = car;
         this.make = make;
         this.model = model;
         this.rank = rank;
