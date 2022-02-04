@@ -1,6 +1,7 @@
 package kea.sem3.jwtdemo.configuration;
 
 import kea.sem3.jwtdemo.entity.*;
+import kea.sem3.jwtdemo.repositories.CarRepository;
 import kea.sem3.jwtdemo.security.UserRepository;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
@@ -16,9 +17,11 @@ public class MakeTestData implements ApplicationRunner {
 
 
     UserRepository userRepository;
+    CarRepository carRepository;
 
-    public MakeTestData(UserRepository userRepository) {
+    public MakeTestData(UserRepository userRepository, CarRepository carRepository) {
         this.userRepository = userRepository;
+        this.carRepository = carRepository;
     }
 
     public  void makePlainUsers(){
@@ -47,12 +50,21 @@ public class MakeTestData implements ApplicationRunner {
 
     }
 
+    public void testCars() {
+        carRepository.save(new Car("serialnum001", "BMW", "M4", "VIP", 1295.05));
+        carRepository.save(new Car("serialnum002", "BMW", "520d", "Middle", 700));
+
+        System.out.println("Created TEST Cars");
+    }
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
         userRepository.deleteAll();
 
         makePlainUsers();
+
+
 
 
     }

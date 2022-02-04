@@ -4,9 +4,9 @@ import kea.sem3.jwtdemo.entity.Reservation;
 
 import java.util.List;
 
-import org.springframework.data.jpa.repository.Query;
+
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.data.repository.query.Param;
+
 
 
 public interface ReservationRepository extends CrudRepository<Reservation, String> {

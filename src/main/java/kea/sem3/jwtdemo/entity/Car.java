@@ -13,7 +13,6 @@ import java.util.List;
 @Getter
 @Setter
 
-@DiscriminatorValue("CAR")
 @Table(name = "car")
 public class Car {
     @Id
